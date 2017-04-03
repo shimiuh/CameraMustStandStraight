@@ -1,59 +1,40 @@
-# CameraView
+# 
+Hi,
 
-*This is a preview release. The API is subject to change.*
+GlassesOn is using the camera in order to analyze all our eye exams and almost every sensor
 
-This is not an official Google product.
+on the phone.
 
-CameraView aims to help Android developers easily integrate Camera features.
+While we can support a lot of possible phone angles we recommend the users to stand up,
 
-Requires API Level 9. The library uses Camera 1 API on API Level 9-20 and Camera2 on 21 and above.
+straighten their arm and keep the phone at eye level. I hope that this demonstration by Woody
 
-| API Level | Camera API | Preview View |
-|:---------:|------------|--------------|
-| 9-13      | Camera1    | SurfaceView  |
-| 14-20     | Camera1    | TextureView  |
-| 21-23     | Camera2    | TextureView  |
-| 24        | Camera2    | SurfaceView  |
+will to understand the problem :)
 
-## Features
+In order to help the user understand that he is doing something wrong we
 
-- Camera preview by placing it in a layout XML (and calling the start method)
-- Configuration by attributes
-  - Aspect ratio (app:aspectRatio)
-  - Auto-focus (app:autoFocus)
-  - Flash (app:flash)
+would like to distort the content of phone in the opposite angle to the phone,
 
-## Usage
+and to do this in all angles unless the phone is straight.
 
-```xml
-<com.google.android.cameraview.CameraView
-    android:id="@+id/camera"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:keepScreenOn="true"
-    android:adjustViewBounds="true"
-    app:autoFocus="true"
-    app:aspectRatio="4:3"
-    app:facing="back"
-    app:flash="auto"/>
-```
+In this exercise you will need to work with the front camera and some
 
-```java
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mCameraView.start();
-    }
+sensors.
 
-    @Override
-    protected void onPause() {
-        mCameraView.stop();
-        super.onPause();
-    }
-```
+1. Write an app that uses the front camera and display it to the user.
 
-You can see a complete usage in the demo app.
+2. Rotate the image in the opposite angle to the tilt (2D)
 
-## Contribution
+, see attached
 
-See [CONTRIBUTING.md](/CONTRIBUTING.md).
+image in the next page.
+
+a. BONUS: Distort the image as in the image to the right (3D)
+
+3. Add a “take a picture” button that will only be clickable if the angle is
+
+right.
+
+4. When “take” a picture button is available take the picture and store it
+
+on the phone.
