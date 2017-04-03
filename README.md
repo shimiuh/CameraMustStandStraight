@@ -21,20 +21,14 @@ In this exercise you will need to work with the front camera and some
 
 sensors.
 
-1. Write an app that uses the front camera and display it to the user.
+1. This app will uses the front camera and display it to the user.
 
 2. Rotate the image in the opposite angle to the tilt (2D)
 
-, see attached
+3. Distort the image up and down on x movment (3D)
 
-image in the next page.
-
-a. BONUS: Distort the image as in the image to the right (3D)
-
-3. Add a “take a picture” button that will only be clickable if the angle is
+4. Take a picture button  will only be clickable if the angle is
 
 right.
 
-4. When “take” a picture button is available take the picture and store it
-
-on the phone.
+5. When “take” a picture button is available will store in the app directory.
